@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Navbar Styles */
+.navbar {
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 1030; /* Ensures the navbar stays above other elements */
+  transition: background-color 0.3s ease-in-out;
+  font-size: 1.2rem;
+}
+
+.navbar-dark {
+  background-color: #28323b !important; /* Dark background when navbar is fixed */
+}
+
+.navbar-light {
+  background-color: #cad0d6 !important; /* Light background when navbar is not fixed */
+}
+
+/* Active Nav Link */
+.nav-link.active {
+  font-weight: bold;
+  
+}
+
+/* Dropdown Menu Toggle */
+.dropdown-menu {
+  display: none;
+  border: 1px solid #007bff; /* Match border color with dropdown toggle */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e7f1ff; /* Light blue hover for dropdown items */
+  color: #007bff; /* Text color */
+}
+
+/* Custom styles for Account dropdown */
+.nav-item.dropdown .nav-link.dropdown-toggle {
+  border: 2px solid #007bff; /* Blue border */
+  background-color: #e7f1ff; /* Light blue background */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px 10px; /* Padding for better spacing */
+  transition: all 0.3s ease-in-out;
+  color: #000; /* Smooth hover effect */
+}
+
+.nav-item.dropdown .nav-link.dropdown-toggle:hover {
+  background-color: #007bff; /* Darker blue on hover */
+  color: #ffffff; /* White text */
+}
+
+/* Footer Styles */
+.footer-container {
+  font-size: 1.25rem; /* Scalable font size */
+}

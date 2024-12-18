@@ -1,0 +1,85 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376); /* Professional gradient */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Title Container */
+.title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* Button Styling */
+.enter-button {
+  font-size: 1rem;
+  color: #fff;
+  background: #4CAF50;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  background: #45a049;
+  transform: scale(1.05);
+}
+/* Title Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-content {
+  animation: fadeIn 1.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .enter-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
