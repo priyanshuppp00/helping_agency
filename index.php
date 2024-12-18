@@ -13,6 +13,7 @@ include 'php/db_connect.php';
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- AOS Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+
 </head>
 
 
@@ -24,7 +25,7 @@ include 'php/db_connect.php';
   <!-- Hero Section -->
   <header class="hero bg-dark text-white text-center py-5">
     <div class="container py-5">
-      <h1>Welcome to Helping Agency</h1>
+      <h2 class="text-center">Welcome to Helping Agency</h2>
       <p class="lead">We provide support, services, and resources to those in need.</p>
       <a href="services.php" class="btn btn-light btn-lg">Explore Services</a>
     </div>
@@ -32,7 +33,43 @@ include 'php/db_connect.php';
 
   <!-- Services Section -->
   <section class="services py-1">
-    <div class="container">
+
+    <div class="container my-5">
+      <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/lifeline.jpg" class="card-img-top" alt="Service">
+            <div class="card-body">
+              <h5 class="card-title">LifeLine Solutions</h5>
+              <p class="card-text">Your Partner for Comprehensive Support and Growth.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/CareConnect.webp" class="card-img-top" alt="Service">
+            <div class="card-body">
+              <h5 class="card-title">CareConnect Services</h5>
+              <p class="card-text">Connecting You to Reliable and Accessible Support</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="assets/images/community.jpg" class="card-img-top" alt="Service">
+            <div class="card-body">
+              <h5 class="card-title">Community Reach Services</h5>
+              <p class="card-text">Empowering Communities, Transforming Lives.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
       <div class="row">
         <?php
