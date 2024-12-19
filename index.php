@@ -1,5 +1,5 @@
 <?php
-include 'php/db_connect.php';
+include 'php/db_connect.php'; // Database connection
 ?>
 
 <!DOCTYPE html>
@@ -14,14 +14,13 @@ include 'php/db_connect.php';
   <link rel="stylesheet" href="assets/css/support.css">
   <!-- AOS Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
-
 </head>
-
 
 <body>
 
   <!-- Navbar -->
   <?php include 'includes/navbar.php'; ?>
+  <?php include 'subscribe.php'; ?> <!-- Include the subscription form here -->
 
   <!-- Hero Section -->
   <header class="hero bg-dark text-white text-center py-5">
@@ -34,7 +33,6 @@ include 'php/db_connect.php';
 
   <!-- Services Section -->
   <section class="services py-1">
-
     <div class="container my-5">
       <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
       <div class="row">
@@ -69,7 +67,6 @@ include 'php/db_connect.php';
           </div>
         </div>
       </div>
-
 
       <h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
       <div class="row">
