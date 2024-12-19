@@ -102,6 +102,8 @@ $user = $result->fetch_assoc();
     </div>
   </div>
 
+  <?php include 'includes/sticky.php'; ?>
+  <?php include 'includes/support.php'; ?>
   <!-- Footer -->
   <?php include 'includes/footer.php'; ?>
 

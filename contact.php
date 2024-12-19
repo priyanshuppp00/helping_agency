@@ -77,6 +77,9 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
     </div>
   </section>
 
+  <?php include 'includes/sticky.php'; ?>
+  <?php include 'includes/support.php'; ?>
+  <!-- Footer -->
   <?php include 'includes/footer.php'; ?>
 
 

@@ -11,6 +11,7 @@ include 'php/db_connect.php';
   <title>Helping Agency</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/support.css">
   <!-- AOS Library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
 
@@ -98,12 +99,15 @@ include 'php/db_connect.php';
       </div>
     </div>
   </section>
-  <?php include 'sticky.php'; ?>
+  <?php include 'includes/sticky.php'; ?>
+  <?php include 'includes/support.php'; ?>
   <!-- Footer -->
   <?php include 'includes/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="./assets/js/support.js"></script>
+
   <script>
     AOS.init(); // Initialize AOS
   </script>

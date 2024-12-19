@@ -115,7 +115,9 @@ if (isset($_GET['token'])) {
     </div>
   </section>
 
-  <?php include 'sticky.php'; ?>
+  <?php include 'includes/sticky.php'; ?>
+  <?php include 'includes/support.php'; ?>
+  <!-- Footer -->
   <?php include 'includes/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
