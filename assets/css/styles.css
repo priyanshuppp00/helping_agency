@@ -1,38 +1,92 @@
-*{
+/* General reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
   font-family: Arial, sans-serif;
   font-size: larger;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
 }
-/* CSS for navbar */
-/* Add this to your CSS */
 
+/* CSS for navbar */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #072545;
+}
+
+.navbar-nav .nav-link {
+  color: #555;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #072545;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(to right, #164b85, #6610f2);
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+}
+
+.btn-light {
+  background-color: #ffffff;
+  border-color: #072545;
+  color: #072545;
+}
+
+.btn-light:hover {
+  background-color: #072545;
+  color: #fff;
+}
+
+/* Cards Section */
 .card {
   border: none;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .card.active {
   background-color: #455565; /* Light gray background color */
 }
+
 .card.active .card-title,
 .card.active .card-text {
-    font-size: 2rem; /* Increases font size */
+  font-size: 2rem; /* Increase font size */
 }
-.card.card.active:hover p{
+
+.card.active:hover p {
   background-color: #6a91a4;
 }
+
 .card img {
   width: 100%; /* Full width of the card */
   height: 200px; /* Fixed height for consistent image size */
   object-fit: cover; /* Ensures the image covers the container without distortion */
 }
+
 .card-title {
   font-size: 1.25rem;
   color: #555;
@@ -43,9 +97,15 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-
 .card-img-top:hover {
   transform: scale(1.1);
+}
+
+/* Heading */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 h1.animate__fadeInDown {
@@ -54,7 +114,7 @@ h1.animate__fadeInDown {
   color: #605c5c;
 }
 
-
+/* Button styles */
 .btn-primary {
   background-color: #072545;
   border-color: #02080e;
@@ -65,12 +125,7 @@ h1.animate__fadeInDown {
   border-color: #0e79eb;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
-}
-
+/* Form Styles */
 .form-label {
   font-weight: bold;
   color: #555;
@@ -81,6 +136,7 @@ h1 {
   border-color: #007bff;
 }
 
+/* Contact Info Section */
 .contact-info {
   margin-top: 30px;
 }
@@ -94,38 +150,82 @@ h1 {
   margin: 10px 0;
   color: #777;
 }
-/* Sticky Social Media Section */
-.sticky-section {
-  position: fixed;
-  top: 50%; /* Position from the top */
-  right: 25px; /* Position from the right */
-  transform: translateY(-50%); /* Center the icons vertically */
-  z-index: 9999; /* Ensure it stays on top of other content */
-}
 
-.social-media-icons a {
-  color: inherit;
-  display: block;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease, font-size 0.3s ease; /* Add smooth transition */
-}
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-.social-media-icons a i {
-  font-size: 2rem;
-  transition: transform 0.3s ease, font-size 0.3s ease; /* Ensure icons respond to hover */
-}
+  .hero p {
+    font-size: 1rem;
+  }
 
-.social-media-icons a:hover i {
-  transform: scale(1.2); /* Scale up the icon */
-  font-size: 2.3rem; /* Increase font size */
-  color: #FFD700; /* Optional: Change color on hover */
-}
+  .card img {
+    height: 150px;
+  }
 
+  .card-title {
+    font-size: 1rem;
+  }
 
-@media (max-width: 768px) {
-  .sticky-section {
-    right: 10px;
+  .card-body {
+    padding: 15px;
   }
 }
 
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.5rem;
+  }
 
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card img {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .card-title {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+}

@@ -1,7 +1,8 @@
+/* Chat Widget */
 .chat-widget {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 2px;
   width: 90%; /* Default for small screens */
   max-width: 250px; /* Cap the size for larger screens */
   display: none;
@@ -9,15 +10,26 @@
   box-shadow: 0px 4px 8px rgba(148, 144, 144, 0.2);
   border-radius: 10px;
   overflow: hidden;
-  z-index: 1050; /* Ensures it stays above other elements */
+  z-index: 1050;;
+}
+
+.chat-widget .btn-close-custom {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: red;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .chat-header {
-  background: #007bff;
-  color: rgb(223, 222, 222);
+  background-color: #072545;
+  color: #fff;
   padding: 10px;
+  border-bottom: 1px solid #ddd;
   text-align: center;
-  font-weight: bold;
 }
 
 .chat-body {
@@ -31,6 +43,12 @@
   padding: 10px;
   border-top: 1px solid #ddd;
 }
+.chat-footer button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
 
 .chat-footer input {
   font-size: 0.9rem;
@@ -40,13 +58,21 @@
   padding: 8px;
 }
 
-.chat-footer button {
-  padding: 8px 10px;
-  border-radius: 5px;
+.chat-footer .sendMessage {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #072545;
+  color: #fff;
   cursor: pointer;
-  margin-top: 5px;
 }
 
+.chat-footer .sendMessage:hover {
+  background-color: #0a56a7;
+}
+
+/* Chat Toggle Button */
 .chat-widget-toggle {
   position: fixed;
   bottom: 10px;
@@ -60,27 +86,28 @@
   justify-content: center;
   box-shadow: 0px 4px 8px rgba(100, 98, 98, 0.2);
   cursor: pointer;
-  z-index: 1060; /* Above other elements but below chat widget */
+  z-index: 1060; /
 }
-
 .chat-widget-toggle i {
   color: white;
   font-size: 24px;
+}
+.chat-widget-toggle:hover {
+  background-color: #0a56a7;
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
   .chat-widget {
-    width: 250px;
-    bottom: 20px;
-    right: 30px;
+    width: 100%;
+  }
+
+  .chat-footer input {
+    width: calc(100% - 60px);
   }
 
   .chat-widget-toggle {
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    right: 10px;
   }
 }
 
@@ -92,8 +119,8 @@
   }
 
   .chat-widget-toggle {
-    bottom: 10px;
-    right: 10px;
+    bottom: 5px;
+    right: 4px;
     width: 50px;
     height: 50px;
   }

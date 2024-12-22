@@ -1,5 +1,5 @@
 <?php
-include 'php/db_connect.php'; // Include database connection
+include '../php/db_connect.php'; // Include database connection
 
 // Check for success or error messages from query parameters
 $successMessage = '';
@@ -16,16 +16,20 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - Helping Agency</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/support.css">
+  <link rel="stylesheet" href="../assets/css/sticky.css">
 </head>
 
 <body>
-  <?php include 'includes/navbar.php'; ?>
+  <?php include '../includes/navbar.php'; ?>
 
   <!-- Page Header -->
-  <header class="bg-dark text-white text-center py-5">
+  <header class="hero text-center py-5 bg-primary text-white">
     <div class="container py-5">
       <h4>Get in Touch</h4>
       <p class="text-center">We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
@@ -77,13 +81,16 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
     </div>
   </section>
 
-  <?php include 'includes/sticky.php'; ?>
-  <?php include 'includes/support.php'; ?>
+  <?php include '../includes/sticky.php'; ?>
+  <?php include '../includes/support.php'; ?>
   <!-- Footer -->
-  <?php include 'includes/footer.php'; ?>
+  <?php include '../includes/footer.php'; ?>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/support.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!isPasswordStrong($password)) {
     $_SESSION['message'] = "Password must be at least 8 characters long and include uppercase letters, lowercase letters, numbers, and special characters.";
     $_SESSION['message_type'] = "warning";
-    header("Location: ../register.php");
+    header("Location: ../code/register.php");
     exit;
   }
 
@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // User already exists
     $_SESSION['message'] = "User already exists! Please use a different email or username.";
     $_SESSION['message_type'] = "warning";
-    header("Location: ../register.php");
+    header("Location: ../code/register.php");
     exit;
   } else {
     // Insert new user into the database
@@ -46,11 +46,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($stmt->execute()) {
       $_SESSION['message'] = "Registration successful! Please log in.";
       $_SESSION['message_type'] = "success";
-      header("Location: ../login.php");
+      header("Location: ../code/login.php");
     } else {
       $_SESSION['message'] = "An error occurred. Please try again.";
       $_SESSION['message_type'] = "danger";
-      header("Location: ../register.php");
+      header("Location: ../code/register.php");
     }
   }
 
@@ -59,6 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $conn->close();
 } else {
   // Redirect if accessed directly
-  header("Location: ../register.php");
+  header("Location: ../code/register.php");
   exit;
 }

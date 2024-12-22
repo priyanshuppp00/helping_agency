@@ -1,7 +1,7 @@
 <?php
 // Start session and include database connection
 session_start();
-include 'php/db_connect.php'; // Replace with your DB connection file
+include '../php/db_connect.php'; // Replace with your DB connection file
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
@@ -26,14 +26,19 @@ $user = $result->fetch_assoc();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Update Profile</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/profile.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/support.css">
+  <link rel="stylesheet" href="../assets/css/sticky.css">
+  <link rel="stylesheet" href="../assets/css/profile.css">
 </head>
 
 <body>
   <!-- Navbar -->
-  <?php include 'includes/navbar.php'; ?>
+  <?php include '../includes/navbar.php'; ?>
 
   <div class="container py-5">
     <div class="profile-card">
@@ -46,13 +51,13 @@ $user = $result->fetch_assoc();
       <?php unset($_SESSION['update_success']);
       endif; ?>
 
-      <form action="php/profile_update.php" method="POST" enctype="multipart/form-data">
+      <form action="../php/profile_update.php" method="POST" enctype="multipart/form-data">
         <!-- Profile Picture -->
         <div class="text-center">
           <?php if (!empty($user['profile_image'])): ?>
-            <img src="uploads/<?= htmlspecialchars($user['profile_image']); ?>" alt="Profile Picture" width="100">
+            <img src="../assets/images/uploads/<?= htmlspecialchars($user['profile_image']); ?>" alt="Profile Picture" width="100">
           <?php else: ?>
-            <img src="https://via.placeholder.com/100" alt="Default Profile Picture" width="100">
+            <img src="../https://via.placeholder.com/100" alt="Default Profile Picture" width="100">
           <?php endif; ?>
           <div class="mt-2">
             <input type="file" name="profile_image" id="profile_image" class="form-control">
@@ -102,10 +107,10 @@ $user = $result->fetch_assoc();
     </div>
   </div>
 
-  <?php include 'includes/sticky.php'; ?>
-  <?php include 'includes/support.php'; ?>
+  <?php include '../includes/sticky.php'; ?>
+  <?php include '../includes/support.php'; ?>
   <!-- Footer -->
-  <?php include 'includes/footer.php'; ?>
+  <?php include '../includes/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Validate input data
   if (empty($name) || empty($email) || empty($message)) {
-    header("Location: ../contact.php?success=0&error=missing_data");
+    header("Location: ../code/contact.php?success=0&error=missing_data");
     exit;
   }
 
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt = $conn->prepare("INSERT INTO contacts (name, email, message) VALUES (?, ?, ?)");
   if ($stmt === false) {
     // Handle SQL preparation error
-    header("Location: ../contact.php?success=0&error=sql_error");
+    header("Location: ../code/contact.php?success=0&error=sql_error");
     exit;
   }
 
@@ -25,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $stmt->bind_param("sss", $name, $email, $message);
   if ($stmt->execute()) {
     // Redirect to the contact page with a success message
-    header("Location: ../contact.php?success=1&name=" . urlencode($name));
+    header("Location: ../code/contact.php?success=1&name=" . urlencode($name));
   } else {
     // Redirect with an error message
-    header("Location: ../contact.php?success=0&error=insert_failed");
+    header("Location: ../code/contact.php?success=0&error=insert_failed");
   }
 
   // Close the statement and connection
@@ -37,6 +37,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   exit;
 } else {
   // Redirect if the request method is not POST
-  header("Location: ../contact.php?success=0&error=invalid_request");
+  header("Location: ../code/contact.php?success=0&error=invalid_request");
   exit;
 }

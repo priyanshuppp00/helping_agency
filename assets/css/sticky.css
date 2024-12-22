@@ -22,9 +22,9 @@
 
 .social-media-icons a:hover i {
   transform: scale(1.3); /* Slightly enlarge the icon */
+  font-size: 2.3rem;
   color: #FFD700; /* Optional: Gold color on hover */
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .sticky-section {

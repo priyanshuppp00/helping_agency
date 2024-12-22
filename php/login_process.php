@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!$stmt) {
     // Handle database error
     $_SESSION['message'] = "Database query error.";
-    header("Location: ../login.php");
+    header("Location: ../code/login.php");
     exit;
   }
 
@@ -29,18 +29,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
       $_SESSION['message'] = "Welcome, " . $user['username'] . "!";
-      header("Location: ../index.php");
+      header("Location: ../code/home.php");
       exit;
     } else {
       // Invalid password
       $_SESSION['message'] = "Invalid username or password.";
-      header("Location: ../login.php");
+      header("Location: ../code/login.php");
       exit;
     }
   } else {
     // Username not found
     $_SESSION['message'] = "Invalid username or password.";
-    header("Location: ../login.php");
+    header("Location: ../../code/login.php");
     exit;
   }
 
@@ -53,6 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $conn->close();
 } else {
   // Redirect if accessed directly
-  header("Location: ../login.php");
+  header("Location: ../code/login.php");
   exit;
 }

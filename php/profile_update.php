@@ -35,7 +35,7 @@ if (isset($_POST['update'])) {
   // Handle profile picture upload
   $profile_pic_name = $user['profile_image']; // Default to existing picture
   if (!empty($profile_pic['name'])) {
-    $upload_dir = '../uploads/';
+    $upload_dir = '../assets/images/uploads/';
 
     // Ensure the upload directory exists
     if (!is_dir($upload_dir)) {
@@ -75,7 +75,7 @@ if (isset($_POST['update'])) {
   // Execute the query
   if ($stmt->execute()) {
     $_SESSION['update_success'] = true;
-    header("Location: ../profile.php"); // Redirect after success
+    header("Location: ../code/profile.php"); // Redirect after success
     exit();
   } else {
     die("Update failed: " . $stmt->error);
