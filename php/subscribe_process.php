@@ -1,43 +1,25 @@
 <?php
-session_start();
-include 'php/db_connect.php';
+require 'db_connect.php';
+
+header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-  $phone = filter_var($_POST['phone'], FILTER_SANITIZE_STRING);
-  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-  $description = filter_var($_POST['description'], FILTER_SANITIZE_STRING);
+  $name = $conn->real_escape_string($_POST['name']);
+  $email = $conn->real_escape_string($_POST['email']);
+  $service = $conn->real_escape_string($_POST['service']);
 
-  if (!empty($email)) {
-    // Check if the user has already subscribed
-    $query = "SELECT id FROM subscribers WHERE email = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->store_result();
+  // Insert data into the database
+  $stmt = $conn->prepare("INSERT INTO subscribe (name, email, service) VALUES (?, ?, ?)");
+  $stmt->bind_param("sss", $name, $email, $service);
 
-    if ($stmt->num_rows > 0) {
-      $_SESSION['subscribed'] = true;
-      echo "You have already subscribed!";
-    } else {
-      $query = "INSERT INTO subscribers (name, phone, email, description) VALUES (?, ?, ?, ?)";
-      $stmt = $conn->prepare($query);
-      $stmt->bind_param("ssss", $name, $phone, $email, $description);
-
-      if ($stmt->execute()) {
-        $_SESSION['subscribed'] = true;
-        echo "Subscription successful!";
-      } else {
-        echo "Error: " . $conn->error;
-      }
-    }
-
-    $stmt->close();
+  if ($stmt->execute()) {
+    echo json_encode(["success" => true]);
   } else {
-    echo "Invalid email address!";
+    echo json_encode(["success" => false, "message" => "An error occurred. Please try again."]);
   }
+
+  $stmt->close();
+  $conn->close();
 } else {
-  if (isset($_SESSION['subscribed']) && $_SESSION['subscribed'] === true) {
-    exit;
-  }
+  echo json_encode(["success" => false, "message" => "Invalid request."]);
 }

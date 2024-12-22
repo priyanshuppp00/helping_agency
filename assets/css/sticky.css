@@ -1,0 +1,55 @@
+/* Sticky Social Media Section */
+.sticky-section {
+  position: fixed;
+  top: 40%; /* Vertically center the section */
+  right: 5px; /* Distance from the right side */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  z-index: 9999; /* Stay above other elements */
+}
+
+.social-media-icons a {
+  color: #333; /* Default color for icons */
+  display: block;
+  margin-bottom: 15px; /* Space between icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+  text-decoration: none; /* Remove underline for links */
+}
+
+.social-media-icons a i {
+  font-size: 2rem; /* Default icon size */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth scaling */
+}
+
+.social-media-icons a:hover i {
+  transform: scale(1.3); /* Slightly enlarge the icon */
+  color: #FFD700; /* Optional: Gold color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sticky-section {
+    right: 5px; /* Adjust distance from the right */
+  }
+
+  .social-media-icons a i {
+    font-size: 1.8rem; /* Slightly smaller icons for smaller screens */
+  }
+
+  .social-media-icons a:hover i {
+    transform: scale(1.2); /* Reduce hover effect scale for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-section {
+    right: 2px; /* Closer to the right edge */
+  }
+
+  .social-media-icons a i {
+    font-size: 1.5rem; /* Smaller icons for very small screens */
+  }
+
+  .social-media-icons a:hover i {
+    transform: scale(1.1); /* Minimal hover scaling */
+  }
+}
