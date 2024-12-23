@@ -29,18 +29,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
       $_SESSION['message'] = "Welcome, " . $user['username'] . "!";
+      $_SESSION['message'] = "Thank You for login sir .";
+      $_SESSION['message_type'] = "success";
       header("Location: ../code/home.php");
       exit;
     } else {
       // Invalid password
       $_SESSION['message'] = "Invalid username or password.";
+      $_SESSION['message_type'] = "danger";
       header("Location: ../code/login.php");
       exit;
     }
   } else {
     // Username not found
     $_SESSION['message'] = "Invalid username or password.";
-    header("Location: ../../code/login.php");
+    $_SESSION['message_type'] = "warning";
+    header("Location: ../code/login.php");
     exit;
   }
 

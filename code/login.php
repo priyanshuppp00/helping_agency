@@ -1,3 +1,6 @@
+<?php
+include '../php/db_connect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +22,7 @@
   <section class="login py-5">
     <div class="container py-5 mt-5">
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4">
           <h2 class="text-center mb-4">Login</h2>
 
           <?php
@@ -61,6 +64,7 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="../assets/js/google_login.js"></script>
   <script src="../assets/js/support.js"></script>
+  <script src="../assets/js/nav.js"></script>
 </body>
 
 </html>

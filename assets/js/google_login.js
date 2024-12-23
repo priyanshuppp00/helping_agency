@@ -3,7 +3,7 @@ function onGoogleLoginSuccess(googleUser) {
 
   // Send ID token to the server
   $.ajax({
-      url: 'google_login_process.php',
+      url: '../google_login_process.php',
       type: 'POST',
       data: {
           idToken: idToken
@@ -12,7 +12,7 @@ function onGoogleLoginSuccess(googleUser) {
           response = JSON.parse(response);
           if (response.success) {
               // Redirect to dashboard or homepage
-              window.location.href = 'index.php';
+              window.location.href = '../code/home.php';
           } else {
               alert(response.message);
           }

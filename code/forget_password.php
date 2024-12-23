@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'php/db_connect.php'; // Include database connection
+require '../php/db_connect.php'; // Include database connection
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = isset($_POST['email']) ? trim($_POST['email']) : '';
@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $_SESSION['message'] = 'Invalid email address.';
     $_SESSION['message_type'] = 'danger';
-    header("Location: forget_password.php");
+    header("Location: ../forget_password.php");
     exit;
   }
 
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (!$stmt) {
     $_SESSION['message'] = 'Database query error.';
     $_SESSION['message_type'] = 'danger';
-    header("Location: forget_password.php");
+    header("Location: ../forget_password.php");
     exit;
   }
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $_SESSION['message_type'] = 'danger';
   }
 
-  header("Location: login.php");
+  header("Location: ../login.php");
   exit;
 }
 ?>
@@ -64,17 +64,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forgot Password</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
+  <link rel="stylesheet" href="../assets/css/support.css">
+  <link rel="stylesheet" href="../assets/css/sticky.css">
 </head>
 
 <body>
 
-  <?php include 'includes/navbar.php'; ?>
+  <?php include '../includes/navbar.php'; ?>
 
   <section class="login py-5">
     <div class="container py-5 mt-5">
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-4 ">
           <h2 class="text-center mb-4">Forgot Password</h2>
 
           <?php
@@ -84,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           }
           ?>
 
-          <form action="forget_password.php" method="POST">
+          <form action="../forget_password.php" method="POST">
             <div class="mb-3">
               <label for="email" class="form-label">Email Address</label>
               <input type="email" class="form-control" id="email" name="email" required>
@@ -97,12 +101,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
   </section>
 
-  <?php include 'includes/sticky.php'; ?>
-  <?php include 'includes/support.php'; ?>
+  <?php include '../includes/sticky.php'; ?>
+  <?php include '../includes/support.php'; ?>
   <!-- Footer -->
-  <?php include 'includes/footer.php'; ?>
+  <?php include '../includes/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/support.js"></script>
 </body>
 
 </html>
