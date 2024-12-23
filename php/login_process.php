@@ -29,8 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
       $_SESSION['message'] = "Welcome, " . $user['username'] . "!";
-      $_SESSION['message'] = "Thank You for login sir .";
-      $_SESSION['message_type'] = "success";
       header("Location: ../code/home.php");
       exit;
     } else {

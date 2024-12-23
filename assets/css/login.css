@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Default input styles */
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 14px;
+  transition: border-color 0.3s ease;
+}
+
+/* When the input is focused */
+.form-control:focus {
+  border-color: black;
+  outline: none; /* Remove default browser outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #202021;
+  font-size: 1.2rem;
+}
+
+.password-toggle-icon:hover {
+  color: #252627;
+}
+
+.btn {
+  background-color: #1877f2;
+  border: none;
+  border-radius: 6px;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+}
+
+.btn-success {
+  background-color: #42b72a;
+  border-color: #42b72a;
+  font-size: 17px;
+  line-height: 48px;
+  border-radius: 6px;
+}
+
+/* Divider Styling */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.text-center a {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-container {
+    max-width: 60%;
+    padding: 20px;
+  }
+
+  .form-control {
+    width: 100%;
+  }
+
+  .btn, .btn-success {
+    font-size: 18px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-container {
+    margin-top: 2vh;
+    padding: 15px;
+    max-width: 60%;
+  }
+
+  .btn, .btn-success {
+    font-size: 16px;
+    line-height: 40px;
+  }
+}

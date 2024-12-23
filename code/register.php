@@ -9,53 +9,53 @@ include '../php/db_connect.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register - Helping Agency</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/register.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
-  <section class="register py-5">
-    <div class="container py-4 mt-4">
-      <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-4">
-          <h2 class="text-center mb-4">Register</h2>
-          <?php
-          // Display feedback messages
-          if (isset($_SESSION['message'])) {
-            echo "<div class='alert alert-" . $_SESSION['message_type'] . "'>" . $_SESSION['message'] . "</div>";
-            unset($_SESSION['message'], $_SESSION['message_type']);
-          }
-          ?>
+  <?php
+  if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+  }
+  ?>
 
-          <form action="../php/register_process.php" method="POST">
-            <div class="mb-3">
-              <label for="fullname" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fullname" name="fullname" required>
-            </div>
-            <div class="mb-3">
-              <label for="username" class="form-label">Username</label>
-              <input type="text" class="form-control" id="username" name="username" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Register</button>
-          </form>
-          <button id="google-login-button" class="btn btn-danger w-100 mt-3">Login with Google</button>
-          <p class="text-center mt-3">Already have an account? <a href="login.php">Login here</a>.</p>
+  <section class="register">
+    <h1 class="text-center mt-5">Register</h1>
+    <div class="register-container mx-auto">
+      <h2>Create a New Account</h2>
+      <?php
+      if (isset($_SESSION['message'])) {
+        echo "<div class='alert alert-" . $_SESSION['message_type'] . "'>" . $_SESSION['message'] . "</div>";
+        unset($_SESSION['message'], $_SESSION['message_type']);
+      }
+      ?>
+      <form action="../php/register_process.php" method="POST">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name" required>
         </div>
-      </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+        </div>
+        <div class="mb-3 password-wrapper">
+          <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+          <i class="fas fa-eye password-toggle-icon" onclick="togglePassword()" id="toggleIcon"></i>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mb-3">Register</button>
+      </form>
+      <p class="text-center mt-3"><a href="forget_password.php">Forgotten account?</a></p>
+      <div class="divider">or</div>
+      <p class="text-center"><a href="login.php" class="already-account">Already have an account?</a></p>
+      <button id="google-login-button" class="btn btn-danger w-100">Join with Google</button>
     </div>
   </section>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-  <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/google_login.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,96 @@
+body {
+  background-color: #f0f2f5;
+  font-family: Arial, sans-serif;
+}
+
+.register-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Default input styles */
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 14px;
+  transition: border-color 0.3s ease;
+}
+
+/* When the input is focused */
+.form-control:focus {
+  border-color: black;
+  outline: none; /* Remove default browser outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #202021;
+  font-size: 1.2rem;
+}
+
+.password-toggle-icon:hover {
+  color: #333;
+}
+
+.btn {
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 12px;
+}
+
+.btn-danger {
+  background-color: #db4437;
+  border: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.divider:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.already-account {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.already-account:hover {
+  text-decoration: underline;
+}
