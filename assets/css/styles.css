@@ -14,23 +14,7 @@ body {
 }
 
 /* CSS for navbar */
-.navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
 
-.navbar-brand {
-  font-size: 1.5rem;
-  color: #072545;
-}
-
-.navbar-nav .nav-link {
-  color: #555;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #072545;
-}
 
 /* Hero Section */
 .hero {
@@ -102,11 +86,6 @@ body {
 }
 
 /* Heading */
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
-}
 
 h1.animate__fadeInDown {
   font-size: 3rem;

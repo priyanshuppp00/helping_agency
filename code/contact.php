@@ -31,8 +31,15 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
   <!-- Page Header -->
   <header class="hero text-center py-5 bg-primary text-white">
     <div class="container py-5">
-      <h4>Get in Touch</h4>
+      <h3>Get in Touch</h3>
       <p class="text-center">We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+    </div>
+  </header>
+  <header class="hero text-white text-center py-5">
+    <div class="container py-5">
+      <h1>Welcome to Helping Agency</h1>
+      <p class="lead">Together, we make a difference in people’s lives.</p>
+      <a href="services.php" class="btn btn-light btn-lg">Explore Our Services</a>
     </div>
   </header>
 
@@ -91,6 +98,8 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/support.js"></script>
+  <script src="../assets/js/nav.js"></script>
+
 </body>
 
 </html>

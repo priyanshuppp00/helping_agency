@@ -1,7 +1,7 @@
 <footer class="bg-light text-center py-4">
   <div class="footer-container">
     <!-- Social Media Links -->
-    <div class="mb-3">
+    <div class="social-icons mb-3">
       <a href="https://www.facebook.com" target="_blank" class="mx-2 text-decoration-none">
         <img src="https://img.icons8.com/ios-filled/20/000000/facebook.png" alt="Facebook">
       </a>
@@ -16,8 +16,9 @@
       </a>
     </div>
 
+
     <!-- Policies Links -->
-    <div class="mb-2">
+    <div class="policy-links mb-2">
       <a href="../terms/termsofuse.php" class="mx-2 text-decoration-none">Terms of Use</a> |
       <a href="../terms/privacy_policy.php" class="mx-2 text-decoration-none">Privacy Policy</a> |
       <a href="cookies.html" class="mx-2 text-decoration-none">Cookies Policy</a>

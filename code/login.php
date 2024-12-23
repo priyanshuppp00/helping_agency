@@ -11,14 +11,9 @@ include '../php/db_connect.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="../assets/css/nav.css">
-  <link rel="stylesheet" href="../assets/css/sticky.css">
-  <link rel="stylesheet" href="../assets/css/support.css">
 </head>
 
 <body>
-  <?php include '../includes/navbar.php'; ?>
-
   <section class="login py-5">
     <div class="container py-5 mt-5">
       <div class="row justify-content-center">
@@ -53,18 +48,11 @@ include '../php/db_connect.php';
     </div>
   </section>
 
-  <?php include '../includes/sticky.php'; ?>
-  <?php include '../includes/support.php'; ?>
-  <!-- Footer -->
-  <?php include '../includes/footer.php'; ?>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="../assets/js/google_login.js"></script>
-  <script src="../assets/js/support.js"></script>
-  <script src="../assets/js/nav.js"></script>
 </body>
 
 </html>

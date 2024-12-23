@@ -11,15 +11,10 @@ include '../php/db_connect.php';
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="../assets/css/nav.css">
-  <link rel="stylesheet" href="../assets/css/support.css">
-  <link rel="stylesheet" href="../assets/css/sticky.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
-  <?php include '../includes/navbar.php'; ?>
-
   <section class="register py-5">
     <div class="container py-4 mt-4">
       <div class="row justify-content-center">
@@ -58,17 +53,9 @@ include '../php/db_connect.php';
       </div>
     </div>
   </section>
-  <?php include '../includes/sticky.php'; ?>
-  <?php include '../includes/support.php'; ?>
-  <!-- Footer -->
-  <?php include '../includes/footer.php'; ?>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
   <script src="../assets/js/script.js"></script>
-  <script src="../assets/js/support.js"></script>
-
-
 </body>
 
 </html>
