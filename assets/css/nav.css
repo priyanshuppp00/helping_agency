@@ -33,17 +33,30 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  border: 1px solid #007bff; /* Match border color with dropdown toggle */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #fff; /* White background for dropdown */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-  width: 100%; /* Ensure full width by default */
-  z-index: 1050; /* Ensure dropdown stays above other elements */
+  z-index: 1050;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .dropdown-menu.show {
   display: block;
 }
+
+
+.nav-link {
+  cursor: pointer;
+}
+
+.dropdown-menu.show {
+  display: block !important;
+}
+
 
 .dropdown-menu .dropdown-item:hover {
   background-color: #e7f1ff; /* Light blue hover for dropdown items */

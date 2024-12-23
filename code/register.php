@@ -33,10 +33,10 @@ include '../php/db_connect.php';
       ?>
       <form action="../php/register_process.php" method="POST">
         <div class="mb-3">
-          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name" required>
+          <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your fullname" required>
         </div>
         <div class="mb-3">
-          <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your name" required>
         </div>
         <div class="mb-3">
           <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>

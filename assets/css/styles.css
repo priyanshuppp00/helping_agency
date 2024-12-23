@@ -22,6 +22,32 @@ body {
   color: #fff;
   text-align: center;
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+}
+/* Style for accordion button when collapsed */
+.accordion-button {
+  font-weight: bold;
+   /* Set default font weight */
+  color: #000; /* Set default color (black) */
+}
+.accordion-body.collapsed{
+ font-size: 1.0;
+}
+/* Style for accordion button when expanded */
+.accordion-button.collapsed {
+  font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .accordion-button {
+    font-size: 1rem; /* Reduce font size on smaller screens for better responsiveness */
+  }
 }
 
 .hero h2 {
@@ -91,32 +117,6 @@ h1.animate__fadeInDown {
   font-size: 3rem;
   margin-bottom: 30px;
   color: #605c5c;
-}
-
-/* Form Styles */
-.form-label {
-  font-weight: bold;
-  color: #555;
-}
-
-.form-control:focus {
-  box-shadow: none;
-  border-color: #007bff;
-}
-
-/* Contact Info Section */
-.contact-info {
-  margin-top: 30px;
-}
-
-.contact-info h4 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  color: #777;
 }
 
 /* Responsive Design */
@@ -189,11 +189,5 @@ h1.animate__fadeInDown {
     font-size: 1.5rem;
   }
 
-  .contact-info h4 {
-    font-size: 1.2rem;
-  }
-
-  .contact-info p {
-    font-size: 0.9rem;
-  }
+  
 }

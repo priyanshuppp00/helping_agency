@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQs - Helping Agency</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <meta name="description" content="Helping Agency is dedicated to uplifting individuals and communities through comprehensive services.">
+  <meta name="keywords" content="Helping Agency, support, care, global reach">
+  <meta name="author" content="Helping Agency">
+  <title>FAQs</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
@@ -30,7 +31,7 @@
 
   <!-- FAQ Section -->
   <section class="py-5">
-    <div class="container">
+    <div class="container col-md-6">
       <div class="accordion" id="faqAccordion">
         <!-- FAQ 1 -->
         <div class="accordion-item">
@@ -102,19 +103,24 @@
           </div>
         </div>
 
+
       </div>
     </div>
   </section>
+
   <?php include '../includes/sticky.php'; ?>
   <?php include '../includes/support.php'; ?>
+
   <!-- Footer -->
   <?php include '../includes/footer.php'; ?>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-  <script src="../assets/js/script.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../assets/js/faq.js"></script>
   <script src="../assets/js/support.js"></script>
+  <script src="../assets/js/nav.js"></script>
 
 </body>
 

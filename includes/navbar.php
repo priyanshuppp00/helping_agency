@@ -1,5 +1,3 @@
-<!-- Navbar -->
-
 <?php
 if (session_status() === PHP_SESSION_NONE) {
   session_start();
@@ -19,9 +17,15 @@ if (session_status() === PHP_SESSION_NONE) {
         <li class="nav-item">
           <a class="nav-link" href="services.php">Services</a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="faqs.php">FAQs</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.php">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="faqs.php">FAQs</a>
+        </li>
         <!-- Login/Logout/Register Section -->
         <?php if (isset($_SESSION['username'])): ?>
           <li class="nav-item dropdown">
@@ -29,27 +33,13 @@ if (session_status() === PHP_SESSION_NONE) {
               <i class="fa-solid fa-user me-3"></i> <?php echo htmlspecialchars($_SESSION['username']); ?>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li>
-                <a class="dropdown-item" href="../code/profile.php">
-                  <i class="fa-solid fa-user me-2"></i> Profile
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../terms/privacy_policy.php" target="_blank" rel="noopener noreferrer">
-                  <i class="fa-solid fa-user-shield me-2"></i> Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../terms/termsofuse.php" target="_blank" rel="noopener noreferrer">
-                  <i class="fa-solid fa-file-contract me-2"></i> Terms of Use
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item text-danger" href="../php/logout.php">
-                  <i class="fa-solid fa-right-from-bracket me-2"></i> Logout
-                </a>
-              </li>
+              <li><a class="dropdown-item" href="../code/profile.php"><i class="fa-solid fa-user me-2"></i> Profile</a></li>
+              <li><a class="dropdown-item" href="../terms/privacy_policy.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-user-shield me-2"></i> Privacy Policy</a></li>
+              <li><a class="dropdown-item" href="../terms/termsofuse.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-contract me-2"></i> Terms of Use</a></li>
+              <li><a class="dropdown-item text-danger" href="../php/logout.php"><i class="fa-solid fa-right-from-bracket me-2"></i> Logout</a></li>
             </ul>
+          </li>
+
           </li>
         <?php else: ?>
           <li class="nav-item dropdown">
@@ -57,20 +47,11 @@ if (session_status() === PHP_SESSION_NONE) {
               <i class="fa-solid fa-user me-2"></i> Account
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-              <li>
-                <a class="dropdown-item" href="../code/login.php">
-                  <i class="fa-solid fa-right-to-bracket me-2"></i> Login
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="../code/register.php">
-                  <i class="fa-solid fa-user-plus me-2"></i> Register
-                </a>
-              </li>
+              <li><a class="dropdown-item" href="../code/login.php"><i class="fa-solid fa-right-to-bracket me-2"></i> Login</a></li>
+              <li><a class="dropdown-item" href="../code/register.php"><i class="fa-solid fa-user-plus me-2"></i> Register</a></li>
             </ul>
           </li>
         <?php endif; ?>
-
       </ul>
     </div>
   </div>

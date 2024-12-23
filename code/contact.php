@@ -15,14 +15,18 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Helping Agency</title>
-
+  <meta name="description" content="Helping Agency is dedicated to uplifting individuals and communities through comprehensive services.">
+  <meta name="keywords" content="Helping Agency, support, care, global reach">
+  <meta name="author" content="Helping Agency">
+  <title>Contact</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/nav.css">
   <link rel="stylesheet" href="../assets/css/support.css">
   <link rel="stylesheet" href="../assets/css/sticky.css">
+
 </head>
 
 <body>
@@ -33,13 +37,6 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
     <div class="container py-5">
       <h3>Get in Touch</h3>
       <p class="text-center">We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
-    </div>
-  </header>
-  <header class="hero text-white text-center py-5">
-    <div class="container py-5">
-      <h1>Welcome to Helping Agency</h1>
-      <p class="lead">Together, we make a difference in people’s lives.</p>
-      <a href="services.php" class="btn btn-light btn-lg">Explore Our Services</a>
     </div>
   </header>
 
@@ -92,13 +89,12 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
   <?php include '../includes/support.php'; ?>
   <!-- Footer -->
   <?php include '../includes/footer.php'; ?>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-  <script src="../assets/js/script.js"></script>
+  <!-- Custom Scripts -->
   <script src="../assets/js/support.js"></script>
   <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/script.js"></script>
 
 </body>
 
