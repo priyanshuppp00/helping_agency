@@ -10,7 +10,7 @@ include '../php/db_connect.php';
   <meta name="description" content="Helping Agency is dedicated to uplifting individuals and communities through comprehensive services.">
   <meta name="keywords" content="Helping Agency, support, care, global reach">
   <meta name="author" content="Helping Agency">
-  <title>Helping Agency - Welcome</title>
+  <title>Home</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -19,7 +19,6 @@ include '../php/db_connect.php';
   <link rel="stylesheet" href="../assets/css/support.css">
   <link rel="stylesheet" href="../assets/css/sticky.css">
   <link rel="stylesheet" href="../assets/css/subscribe.css">
-
 
 </head>
 
@@ -82,12 +81,12 @@ include '../php/db_connect.php';
   <?php include '../includes/support.php'; ?>
   <!-- Footer -->
   <?php include '../includes/footer.php'; ?>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom Scripts -->
   <script src="../assets/js/support.js"></script>
   <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/script.js"></script>
   <script src="../assets/js/subscribe.js"></script>
 
 

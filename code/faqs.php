@@ -110,17 +110,14 @@
 
   <?php include '../includes/sticky.php'; ?>
   <?php include '../includes/support.php'; ?>
-
   <!-- Footer -->
   <?php include '../includes/footer.php'; ?>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom Scripts -->
-  <script src="../assets/js/faq.js"></script>
   <script src="../assets/js/support.js"></script>
   <script src="../assets/js/nav.js"></script>
+  <script src="../assets/js/script.js"></script>
 
 </body>
 

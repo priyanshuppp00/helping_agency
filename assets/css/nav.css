@@ -52,12 +52,6 @@
 .nav-link {
   cursor: pointer;
 }
-
-.dropdown-menu.show {
-  display: block !important;
-}
-
-
 .dropdown-menu .dropdown-item:hover {
   background-color: #e7f1ff; /* Light blue hover for dropdown items */
   color: #007bff; /* Text color */
