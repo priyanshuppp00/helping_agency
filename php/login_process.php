@@ -7,11 +7,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $username = isset($_POST['username']) ? trim($_POST['username']) : '';
   $password = isset($_POST['password']) ? $_POST['password'] : '';
 
+  // Check username length
+  if (strlen($username) < 3 || strlen($username) > 20) {
+    $_SESSION['message'] = "Username must be between 3 and 20 characters long.";
+    $_SESSION['message_type'] = "warning";
+    header("Location: ../code/login.php");
+    exit;
+  }
+
   // Prepare and execute SQL statement
   $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
   if (!$stmt) {
     // Handle database error
     $_SESSION['message'] = "Database query error.";
+    $_SESSION['message_type'] = "danger"; // Set message type for display
     header("Location: ../code/login.php");
     exit;
   }
@@ -25,10 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Verify password
     if (password_verify($password, $user['password'])) {
-      // Set session variables and redirect to dashboard
+      // Set session variables and redirect to home
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['username'] = $user['username'];
-      $_SESSION['message'] = "Welcome, " . $user['username'] . "!";
+      $_SESSION['is_admin'] = $user['is_admin'] === 'yes' ? 'yes' : 'no'; // Ensure is_admin is set correctly
+      $_SESSION['message'] = "Welcome, " . htmlspecialchars($user['username']) . "!";
+      $_SESSION['message_type'] = "success"; // Set message type for display
       header("Location: ../code/home.php");
       exit;
     } else {

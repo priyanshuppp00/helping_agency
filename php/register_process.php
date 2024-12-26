@@ -5,7 +5,7 @@ require 'db_connect.php'; // Include database connection
 function isPasswordStrong($password)
 {
   // Define password strength criteria
-  return preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\w\d\s])(?=.*[A-Z]).{8,}$/', $password);
+  return preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^\w\d\s]).{8,}$/', $password);
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -14,6 +14,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $username = htmlspecialchars($_POST['username']);
   $email = htmlspecialchars($_POST['email']);
   $password = $_POST['password'];
+  $role = isset($_POST['role']) ? htmlspecialchars($_POST['role']) : 'user'; // Default to 'user'
+
+  // Check username length
+  if (strlen($username) < 3 || strlen($username) > 20) {
+    $_SESSION['message'] = "Username must be between 3 and 5 characters long.";
+    $_SESSION['message_type'] = "warning";
+    header("Location: ../code/register.php");
+    exit;
+  }
 
   // Check if password is strong
   if (!isPasswordStrong($password)) {
@@ -34,14 +43,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if ($result->num_rows > 0) {
     // User already exists
-    $_SESSION['message'] = "User already exists! Please use a different email or username.";
+    $_SESSION['message'] = "User  already exists! Please use a different email or username.";
     $_SESSION['message_type'] = "warning";
     header("Location: ../code/register.php");
     exit;
   } else {
     // Insert new user into the database
-    $stmt = $conn->prepare("INSERT INTO users (fullname, username, email, password) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $fullname, $username, $email, $password_hashed);
+    $stmt = $conn->prepare("INSERT INTO users (fullname, username, email, password, is_admin) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $fullname, $username, $email, $password_hashed, $role);
 
     if ($stmt->execute()) {
       $_SESSION['message'] = "Registration successful! Please log in.";

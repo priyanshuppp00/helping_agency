@@ -15,7 +15,6 @@ include '../php/db_connect.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="../assets/css/nav.css">
   <link rel="stylesheet" href="../assets/css/support.css">
   <link rel="stylesheet" href="../assets/css/sticky.css">
   <link rel="stylesheet" href="../assets/css/subscribe.css">
@@ -82,6 +81,7 @@ include '../php/db_connect.php';
   <!-- Footer -->
   <?php include '../includes/footer.php'; ?>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
 
   <!-- Custom Scripts -->
   <script src="../assets/js/support.js"></script>

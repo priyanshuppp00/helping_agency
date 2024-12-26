@@ -5,7 +5,16 @@ body {
 .dashboard-header {
   background-image: linear-gradient(to right, #164b85, #6610f2);
 }
+.btn-light {
+  background-color: #ffffff;
+  border-color: #072545;
+  color: #072545;
+}
 
+.btn-light:hover {
+  background-color: #072545;
+  color: #fff;
+}
 .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -15,7 +24,3 @@ body {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-  background: #f8f9fa;
-  font-size: 14px;
-}

@@ -14,8 +14,7 @@ include '../php/db_connect.php'; // Database connection
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="stylesheet" href="../assets/css/styles.css">
-  <link rel="stylesheet" href="../assets/css/dasboard.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
   <link rel="stylesheet" href="../assets/css/nav.css">
   <link rel="stylesheet" href="../assets/css/support.css">
   <link rel="stylesheet" href="../assets/css/sticky.css">
@@ -72,7 +71,6 @@ include '../php/db_connect.php'; // Database connection
         </div>
       </div>
     </div>
-
     <!-- Additional Sections -->
     <div class="row mt-5">
       <div class="col-md-6">
@@ -101,7 +99,16 @@ include '../php/db_connect.php'; // Database connection
   <?php include '../includes/sticky.php'; ?>
   <?php include '../includes/support.php'; ?>
   <!-- Footer -->
-  <?php include '../includes/footer.php'; ?>
+  <footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+      <p>&copy; <?php echo date("Y"); ?> Helping Agency. All rights reserved.</p>
+      <div class="d-flex justify-content-center">
+        <a href="login.php" class="btn btn-warning mx-2">Admin Login</a>
+        <a href="register.php" class="btn btn-success mx-2">Register New User</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom Scripts -->
