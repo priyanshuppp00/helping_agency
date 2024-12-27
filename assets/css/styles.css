@@ -43,13 +43,6 @@ body {
   font-weight: normal;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .accordion-button {
-    font-size: 1rem; /* Reduce font size on smaller screens for better responsiveness */
-  }
-}
-
 .hero h2 {
   font-size: 2.5rem;
 }
@@ -130,7 +123,7 @@ h1.animate__fadeInDown {
   }
 
   .card img {
-    height: 150px;
+    height: 300px;
   }
 
   .card-title {
@@ -143,6 +136,10 @@ h1.animate__fadeInDown {
 }
 
 @media (max-width: 768px) {
+  .accordion-button {
+    font-size: 1rem; /* Reduce font size on smaller screens for better responsiveness */
+  }
+
   .hero h2 {
     font-size: 1.5rem;
   }
@@ -152,7 +149,7 @@ h1.animate__fadeInDown {
   }
 
   .card img {
-    height: 150px;
+    height: 300px;
   }
 
   .card-title {
@@ -178,7 +175,7 @@ h1.animate__fadeInDown {
   }
 
   .card img {
-    height: 120px;
+    height: 200px;
   }
 
   .card-title {
