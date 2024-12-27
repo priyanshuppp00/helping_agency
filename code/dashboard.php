@@ -1,5 +1,13 @@
 <?php
+session_start(); // Start the session
 include '../php/db_connect.php'; // Database connection
+
+// Check if the user is logged in and if the welcome message should be shown
+$showWelcome = isset($_SESSION['show_welcome']) && $_SESSION['show_welcome'];
+if ($showWelcome) {
+  // Unset the session variable to prevent showing the message again on refresh
+  unset($_SESSION['show_welcome']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,9 +37,17 @@ include '../php/db_connect.php'; // Database connection
       <h2 class="text-center">Welcome to Helping Agency</h2>
       <p class="lead">We provide support, services, and resources to those in need.</p>
       <a href="services.php" class="btn btn-light btn-lg">Explore Services</a>
+      <?php if ($showWelcome): ?>
+        <h1 id="welcome-message">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
+        <p>Your one-stop solution for managing services and users effectively</p>
+        <script>
+          // Hide the welcome message after 5 seconds
+          setTimeout(function() {
+            document.getElementById('welcome-message').style.display = 'none';
+          }, 5000);
+        </script>
+      <?php endif; ?>
     </div>
-    <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
-    <p>Your one-stop solution for managing services and users effectively</p>
   </header>
 
   <!-- Main Content -->
@@ -63,10 +79,43 @@ include '../php/db_connect.php'; // Database connection
       <div class="col-md-4">
         <div class="card text-center border-info">
           <div class="card-body">
-            <i class="fa-solid fa-chart-line fa-3x text-info mb-3"></i>
+            <i class=" fa-solid fa-chart-line fa-3x text-info mb-3"></i>
             <h5 class="card-title">View Analytics</h5>
             <p class="card-text">Check real-time statistics and reports.</p>
             <a href="analytics.php" class="btn btn-info">View Analytics</a>
+          </div>
+        </div>
+      </div>
+      <!-- Register New Admin Card -->
+      <div class="col-md-4">
+        <div class="card text-center justify-content-center border-warning">
+          <div class="card-body">
+            <i class="fa-solid fa-user-plus fa-3x text-warning mb-3"></i>
+            <h5 class="card-title">Register New Admin</h5>
+            <p class="card-text">Add a new admin to your agency.</p>
+            <a href="admin_register.php" class="btn btn-warning">Register Admin</a>
+          </div>
+        </div>
+      </div>
+      <!-- Manage Feedback Card -->
+      <div class="col-md-4">
+        <div class="card text-center border-secondary">
+          <div class="card-body">
+            <i class="fa-solid fa-comments fa-3x text-secondary mb-3"></i>
+            <h5 class="card-title">Manage Feedback</h5>
+            <p class="card-text">View and respond to user feedback.</p>
+            <a href="manage_feedback.php" class="btn btn-secondary">Manage Feedback</a>
+          </div>
+        </div>
+      </div>
+      <!-- View Reports Card -->
+      <div class="col-md-4">
+        <div class="card text-center border-danger">
+          <div class="card-body">
+            <i class="fa-solid fa-file-alt fa-3x text-danger mb-3"></i>
+            <h5 class="card-title">View Reports</h5>
+            <p class="card-text">Access detailed reports and insights.</p>
+            <a href="view_reports.php" class="btn btn-danger">View Reports</a>
           </div>
         </div>
       </div>
@@ -75,22 +124,45 @@ include '../php/db_connect.php'; // Database connection
     <div class="row mt-5">
       <div class="col-md-6">
         <div class="p-4 bg-light rounded shadow-sm">
-          <h4>Recent Activities</h4>
+          <h4>Upcoming Events</h4>
           <ul class="list-group">
-            <li class="list-group-item">User John added a new service: Counseling</li>
-            <li class="list-group-item">5 new user registrations</li>
-            <li class="list-group-item">Updated "Community Reach" service details</li>
+            <li class="list-group-item">Community Outreach - March 15, 2023</li>
+            <li class="list-group-item">Annual Fundraiser - April 20, 2023</li>
+            <li class="list-group-item">Volunteer Training - May 5, 2023</li>
           </ul>
         </div>
       </div>
       <div class="col-md-6">
         <div class="p-4 bg-light rounded shadow-sm">
-          <h4>Quick Links</h4>
+          <h4>Important Announcements</h4>
           <ul class="list-group">
-            <li class="list-group-item"><a href="profile.php">My Profile</a></li>
-            <li class="list-group-item"><a href="notifications.php">Notifications</a></li>
-            <li class="list-group-item"><a href="settings.php">Settings</a></li>
+            <li class="list-group-item">New service hours effective from March 1, 2023</li>
+            <li class="list-group-item">Staff meeting scheduled for March 10, 2023</li>
+            <li class="list-group-item">Feedback survey available until March 30, 2023</li>
           </ul>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <h4>Recent Activities</h4>
+            <ul class="list-group">
+              <li class="list-group-item">User John added a new service: Counseling</li>
+              <li class="list-group-item">5 new user registrations</li>
+              <li class="list-group-item">Updated "Community Reach" service details</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 bg-light rounded shadow-sm">
+            <h4>Quick Links</h4>
+            <ul class="list-group">
+              <li class="list-group-item"><a href="profile.php">My Profile</a></li>
+              <li class="list-group-item"><a href="notifications.php">Notifications</a></li>
+              <li class="list-group-item"><a href="settings.php">Settings</a></li>
+              <li class="list-group-item"><a href="login.php">Admin Login</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -98,16 +170,9 @@ include '../php/db_connect.php'; // Database connection
 
   <?php include '../includes/sticky.php'; ?>
   <?php include '../includes/support.php'; ?>
+  <?php include '../includes/footer.php' ?>
+
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p>&copy; <?php echo date("Y"); ?> Helping Agency. All rights reserved.</p>
-      <div class="d-flex justify-content-center">
-        <a href="login.php" class="btn btn-warning mx-2">Admin Login</a>
-        <a href="register.php" class="btn btn-success mx-2">Register New User</a>
-      </div>
-    </div>
-  </footer>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 

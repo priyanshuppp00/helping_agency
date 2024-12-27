@@ -48,10 +48,10 @@
   display: block;
 }
 
-
 .nav-link {
   cursor: pointer;
 }
+
 .dropdown-menu .dropdown-item:hover {
   background-color: #e7f1ff; /* Light blue hover for dropdown items */
   color: #007bff; /* Text color */
@@ -65,9 +65,9 @@
   padding: 5px 10px; /* Padding for better spacing */
   transition: all 0.3s ease-in-out;
   color: #000; /* Smooth hover effect */
-  cursor: pointer; /* Add pointer cursor */
-}
+  cursor: pointer; }
 
+/* Hover effect for dropdown toggle */
 .nav-item.dropdown .nav-link.dropdown-toggle:hover {
   background-color: #007bff; /* Darker blue on hover */
   color: #ffffff; /* White text */
@@ -82,24 +82,52 @@
   color: #000; /* Ensure the toggle icon is visible */
 }
 
+/* Custom styles for active dropdown */
+.navbar-nav .nav-item.dropdown .nav-link.active {
+  background-color: #007bff; /* Blue background */
+  color:#e7f1ff;; /* White text */
+}
 
+.navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
+  border: 2px solid transparent; /* Default border */
+}
 
+.navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle.active {
+  border: 2px solid #007bff; /* Blue border when active */
+}
+
+/* Dropdown item active state */
+.dropdown-menu .dropdown-item.active {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+}
+
+/* Focus styles for accessibility */
+.nav-link:focus {
+  outline: 2px solid #007bff; /* Blue outline for focused links */
+}
 
 /* Footer Styles */
 footer {
   font-size: 1.1rem;
-  background-color: #f8f9fa; /* Light background */
+  background-color: #28323b; /* Dark background */
   padding: 20px 0; /* Spacing around footer */
 }
 
 .footer-container {
   max-width: 1200px; /* Limit footer width for large screens */
   margin: 0 auto; /* Center the footer container */
+  color: #b3b7bb; /* Light gray text color */
+}
+
+.footer-text {
+  color: #b3b7bb; /* Light gray text color */
 }
 
 footer a {
   text-decoration: none; /* Remove underline from links */
   transition: color 0.3s ease; /* Smooth hover effect */
+  color: #b3b7bb; /* Light gray text color */
 }
 
 footer a:hover {
@@ -117,7 +145,7 @@ footer a:hover {
 }
 
 .social-icons img {
-  width: 24px; /* Icon size */
+  width: 40px; /* Increased icon size */
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
@@ -129,12 +157,11 @@ footer a:hover {
 .policy-links {
   text-align: center; /* Center-align policy links */
   margin-bottom: 10px; /* Space below links */
-  
 }
 
 .policy-links a {
   margin: 0 5px; /* Space between links */
-  
+  color: #b3b7bb; /* Light gray text color */
 }
 
 .policy-links a:hover {
@@ -144,17 +171,14 @@ footer a:hover {
 /* Responsive styles */
 @media (max-width: 1200px) {
   .navbar {
-    font-size: 1.2rem;
-    width: 100%;
-     /* Reduce font size on medium screens */
+    font-size: 1.2rem; /* Reduce font size on medium screens */
   }
- 
-.dropdown{
-  width: max-content;
-}
-.dropdown-menu {
-    width: 50%;
-    font-size: 1rem /* Ensure dropdown fits full width on medium screens */
+  .dropdown {
+    width: max-content;
+  }
+  .dropdown-menu {
+    width: 50%; /* Ensure dropdown fits full width on medium screens */
+    font-size: 1rem;
   }
 }
 
@@ -162,30 +186,26 @@ footer a:hover {
   .navbar {
     padding: 10px; /* Adjust padding on smaller screens */
     font-size: 0.9rem; /* Further reduce font size on small screens */
-    width: 100%;
   }
-.dropdown{
-  font-size: 0.9rem;
-
-}
+  .dropdown {
+    font-size: 0.9rem;
+  }
   .dropdown-menu {
     position: static; /* Stack dropdown menu vertically on small screens */
     width: 40%;
     font-size: 0.9rem;
   }
-
   .nav-item.dropdown .nav-link.dropdown-toggle {
     padding: 8px 12px; /* Adjust padding for better fit on small screens */
   }
   .social-icons img {
     width: 20px; /* Adjust icon size for smaller screens */
   }
-
   footer {
-    padding: 15px 10px; 
-    font-size: 1rem;/* Reduce padding for smaller screens */
+    padding: 15px 10px; /* Reduce padding for smaller screens */
+    font-size: 1rem; /* Reduce font size for smaller screens */
   }
-  .policy-links{
+  .policy-links {
     font-size: 1rem;
   }
 }
@@ -194,11 +214,9 @@ footer a:hover {
   .navbar-brand {
     font-size: 1.2rem; /* Adjust brand font size on very small screens */
   }
-
   .nav-item.dropdown .nav-link.dropdown-toggle {
     padding: 8px; /* Adjust padding further for extra small screens */
   }
-
   .dropdown-menu {
     width: 35%; /* Ensure dropdown fits full width */
     font-size: 0.8rem;
