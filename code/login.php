@@ -1,10 +1,6 @@
 <?php
 include '../php/db_connect.php'; // Include database connection
 
-// Start the session
-if (session_status() === PHP_SESSION_NONE) {
-  session_start();
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

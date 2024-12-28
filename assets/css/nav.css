@@ -24,7 +24,10 @@
 .navbar-light {
   background-color: #cad0d6 !important; 
 }
-
+.navbar a.nav-link.hover{
+  color: black;
+  
+}
 .navbar.scrolled a.nav-link:hover {
   color: white !important;
 }
@@ -59,7 +62,7 @@
 
 /* Custom styles for Account dropdown */
 .nav-item.dropdown .nav-link.dropdown-toggle {
-  border: 2px solid #007bff; /* Blue border */
+  border: 2px solid #121212; /* Blue border */
   background-color: #e7f1ff; /* Light blue background */
   border-radius: 5px; /* Rounded corners */
   padding: 5px 10px; /* Padding for better spacing */
@@ -73,38 +76,12 @@
   color: #ffffff; /* White text */
 }
 
-/* Navbar-toggler adjustments */
-.navbar-toggler {
-  border-color: transparent;
-}
-
-.navbar-toggler-icon {
-  color: #000; /* Ensure the toggle icon is visible */
-}
 
 /* Custom styles for active dropdown */
 .navbar-nav .nav-item.dropdown .nav-link.active {
   background-color: #007bff; /* Blue background */
+  border: 2px solid #07bffe8d;
   color:#e7f1ff;; /* White text */
-}
-
-.navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle {
-  border: 2px solid transparent; /* Default border */
-}
-
-.navbar-nav .nav-item.dropdown .nav-link.dropdown-toggle.active {
-  border: 2px solid #007bff; /* Blue border when active */
-}
-
-/* Dropdown item active state */
-.dropdown-menu .dropdown-item.active {
-  background-color: #007bff; /* Blue background */
-  color: white; /* White text */
-}
-
-/* Focus styles for accessibility */
-.nav-link:focus {
-  outline: 2px solid #007bff; /* Blue outline for focused links */
 }
 
 /* Footer Styles */
