@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $role = isset($_POST['role']) ? htmlspecialchars($_POST['role']) : 'user'; // Default to 'user'
 
   // Check username length
-  if (strlen($username) < 3 || strlen($username) > 20) {
+  if (strlen($username) < 3 || strlen($username) > 5) {
     $_SESSION['message'] = "Username must be between 3 and 5 characters long.";
     $_SESSION['message_type'] = "warning";
     header("Location: ../code/register.php");

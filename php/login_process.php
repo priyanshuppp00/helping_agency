@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = isset($_POST['password']) ? $_POST['password'] : '';
 
   // Check username length
-  if (strlen($username) < 3 || strlen($username) > 20) {
+  if (strlen($username) < 3 || strlen($username) > 5) {
     $_SESSION['message'] = "Username must be between 3 and 5 characters long.";
     $_SESSION['message_type'] = "warning";
     header("Location: ../code/login.php");

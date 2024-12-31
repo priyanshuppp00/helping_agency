@@ -1,6 +1,5 @@
 <?php
-include '../php/db_connect.php'; // Include database connection
-
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +23,7 @@ include '../php/db_connect.php'; // Include database connection
       // Display feedback messages
       if (isset($_SESSION['message'])) {
         echo "<div class='alert alert-" . htmlspecialchars($_SESSION['message_type']) . "'>" . htmlspecialchars($_SESSION['message']) . "</div>";
-        unset($_SESSION['message'], $_SESSION['message_type']);
+        unset($_SESSION['message'], $_SESSION['message_type']); // Unset session messages
       }
       ?>
       <form action="../php/login_process.php" method="POST">

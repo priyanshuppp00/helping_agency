@@ -54,7 +54,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1 && isset($_GET['name'])) {
       <div class="row">
         <!-- Contact Form Section -->
         <div class="col-md-6">
-          <form action="php/submit_contact.php" method="POST">
+          <form action="../php/submit_contact.php" method="POST">
             <div class="mb-3">
               <label for="name" class="form-label">Your Name</label>
               <input type="text" class="form-control" id="name" name="name" required>
