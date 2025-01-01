@@ -1,5 +1,8 @@
 <?php
 session_start();
-session_destroy(); // Destroy all session data
-header("Location: ../index.html"); // Redirect to login
-exit;
+session_unset(); // Unset session variables
+session_destroy(); // Destroy the session
+
+// Redirect to the index.html
+header("Location: ../index.html");
+exit();
