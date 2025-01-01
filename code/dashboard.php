@@ -37,16 +37,6 @@ if ($showWelcome) {
       <h2 class="text-center">Welcome to Helping Agency</h2>
       <p class="lead">We provide support, services, and resources to those in need.</p>
       <a href="services.php" class="btn btn-light btn-lg">Explore Services</a>
-      <?php if ($showWelcome): ?>
-        <h1 id="welcome-message">Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
-        <p>Your one-stop solution for managing services and users effectively</p>
-        <script>
-          // Hide the welcome message after 5 seconds
-          setTimeout(function() {
-            document.getElementById('welcome-message').style.display = 'none';
-          }, 5000);
-        </script>
-      <?php endif; ?>
     </div>
   </header>
 
@@ -60,7 +50,7 @@ if ($showWelcome) {
             <i class="fa-solid fa-handshake fa-3x text-primary mb-3"></i>
             <h5 class="card-title">Manage Services</h5>
             <p class="card-text">View, edit, or add new services for your agency.</p>
-            <a href="manage_services.php" class="btn btn-primary">Go to Services</a>
+            <a href="#" class="btn btn-primary">Go to Services</a>
           </div>
         </div>
       </div>
@@ -71,7 +61,7 @@ if ($showWelcome) {
             <i class="fa-solid fa-users fa-3x text-success mb-3"></i>
             <h5 class="card-title">Manage Users</h5>
             <p class="card-text">Handle user registrations and profiles.</p>
-            <a href="manage_users.php" class="btn btn-success">Go to Users</a>
+            <a href="#" class="btn btn-success">Go to Users</a>
           </div>
         </div>
       </div>
@@ -82,7 +72,7 @@ if ($showWelcome) {
             <i class=" fa-solid fa-chart-line fa-3x text-info mb-3"></i>
             <h5 class="card-title">View Analytics</h5>
             <p class="card-text">Check real-time statistics and reports.</p>
-            <a href="analytics.php" class="btn btn-info">View Analytics</a>
+            <a href="#" class="btn btn-info">View Analytics</a>
           </div>
         </div>
       </div>
@@ -93,7 +83,7 @@ if ($showWelcome) {
             <i class="fa-solid fa-user-plus fa-3x text-warning mb-3"></i>
             <h5 class="card-title">Register New Admin</h5>
             <p class="card-text">Add a new admin to your agency.</p>
-            <a href="admin_register.php" class="btn btn-warning">Register Admin</a>
+            <a href="#" class="btn btn-warning">Register Admin</a>
           </div>
         </div>
       </div>
@@ -104,7 +94,7 @@ if ($showWelcome) {
             <i class="fa-solid fa-comments fa-3x text-secondary mb-3"></i>
             <h5 class="card-title">Manage Feedback</h5>
             <p class="card-text">View and respond to user feedback.</p>
-            <a href="manage_feedback.php" class="btn btn-secondary">Manage Feedback</a>
+            <a href="#" class="btn btn-secondary">Manage Feedback</a>
           </div>
         </div>
       </div>
@@ -115,7 +105,7 @@ if ($showWelcome) {
             <i class="fa-solid fa-file-alt fa-3x text-danger mb-3"></i>
             <h5 class="card-title">View Reports</h5>
             <p class="card-text">Access detailed reports and insights.</p>
-            <a href="view_reports.php" class="btn btn-danger">View Reports</a>
+            <a href="#" class="btn btn-danger">View Reports</a>
           </div>
         </div>
       </div>
@@ -158,8 +148,8 @@ if ($showWelcome) {
             <h4>Quick Links</h4>
             <ul class="list-group">
               <li class="list-group-item"><a href="profile.php">My Profile</a></li>
-              <li class="list-group-item"><a href="notifications.php">Notifications</a></li>
-              <li class="list-group-item"><a href="settings.php">Settings</a></li>
+              <li class="list-group-item"><a href="#">Notifications</a></li>
+              <li class="list-group-item"><a href="#">Settings</a></li>
               <li class="list-group-item"><a href="login.php">Admin Login</a></li>
             </ul>
           </div>
