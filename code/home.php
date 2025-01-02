@@ -18,7 +18,6 @@ include '../php/db_connect.php';
   <link rel="stylesheet" href="../assets/css/support.css">
   <link rel="stylesheet" href="../assets/css/sticky.css">
   <link rel="stylesheet" href="../assets/css/subscribe.css">
-
 </head>
 
 
@@ -28,9 +27,9 @@ include '../php/db_connect.php';
   <?php include '../includes/navbar.php'; ?>
   <?php include '../includes/subscribe.php'; ?>
   <!-- Hero Section -->
-  <header class="hero bg-primary text-white text-center py-5">
+  <header class="hero bg-primary text-white  py-5">
     <div class="container py-5">
-      <h1>Welcome to Helping Agency</h1>
+      <h2 class="text-center">Welcome to Helping Agency</h2>
       <p class="lead">Together, we make a difference in people’s lives.</p>
       <a href="services.php" class="btn btn-light btn-lg">Explore Our Services</a>
     </div>
