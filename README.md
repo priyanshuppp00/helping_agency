@@ -1,6 +1,4 @@
-# Project Title: Reload Site
-
-Reload Site is a full-featured web application that ensures user authentication and provides a seamless user experience across various functionalities. The site starts with a login/register page and redirects unauthenticated users to sign in or sign up before accessing the main content. 
+# Project Title: helping_agency
 
 ## Features
 
@@ -44,12 +42,12 @@ Reload Site is a full-featured web application that ensures user authentication 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/reload-site.git
+   git clone https://github.com/priyanshuppp00/helping_agency.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd reload-site
+   cd helping_agency
    ```
 
 3. Set up the database:
@@ -78,37 +76,14 @@ Reload Site is a full-featured web application that ensures user authentication 
 3. Explore the navigation pages: Home, Services, About, Contact, and FAQs.
 4. For admin access, use the provided credentials to manage services and profiles.
 
-## Folder Structure
-
-```
-reload-site/
-├── assets/
-│   ├── css/
-│   │   └── styles.css
-│   ├── images/
-│   └── js/
-│       └── scripts.js
-├── includes/
-│   ├── navbar.php
-│   ├── footer.php
-│   └── support.php
-├── php/
-│   ├── db_connect.php
-│   └── auth.php
-├── index.php
-├── login.php
-├── register.php
-├── dashboard.php
-├── about.php
-├── contact.php
-├── services.php
-└── faqs.php
-```
 
 ## Screenshots
 
+### 0. ![index](https://github.com/user-attachments/assets/b1b430b6-efb2-4c69-818f-8eab08a96016)
+
+
 ### 1. Login Page
-![Login Page](assets/images/screenshots/login.png)
+![Login Page](C:\xampp\htdocs\helping_agency\Project_img/login.png)
 
 ### 2. Home Page
 ![Home Page](assets/images/screenshots/home.png)
