@@ -79,28 +79,42 @@
 
 ## Screenshots
 
-### 0. ![index](https://github.com/user-attachments/assets/b1b430b6-efb2-4c69-818f-8eab08a96016)
+### 1. ![index](https://github.com/user-attachments/assets/b1b430b6-efb2-4c69-818f-8eab08a96016)
 
 
-### 1. Login Page
-![Login Page](C:\xampp\htdocs\helping_agency\Project_img/login.png)
+### 2. Login Page
+![login](https://github.com/user-attachments/assets/84c2b411-f52c-4be1-8458-5cd5ee063460)
 
-### 2. Home Page
-![Home Page](assets/images/screenshots/home.png)
 
-### 3. Admin Dashboard
-![Admin Dashboard](assets/images/screenshots/admin_dashboard.png)
+### 2.1. Register Page
+![register](https://github.com/user-attachments/assets/07777d07-0d05-4d08-9be3-cf9a7c06d329)
+
+### 3. Home Page
+![home](https://github.com/user-attachments/assets/6e1d0247-2da4-4e23-80ce-79403ed2f7d8)
+
+ ### 4. Services 
+![services](https://github.com/user-attachments/assets/af677890-b589-4ad4-927e-b8e2ad5820fd)
+
+ ### 5. About
+ ![about](https://github.com/user-attachments/assets/0125bee7-de55-45d8-bdeb-f407291be8fb)
+
+  ### 6. Contact
+ ![contact](https://github.com/user-attachments/assets/40b692d6-a007-40ae-95f2-2f7b87ac4ecd)
+ 
+### 7. Admin Dashboard
+![dashboard](https://github.com/user-attachments/assets/b9da2859-4a2b-47bd-92fe-631b96fdf3bd)
+![dashboard1](https://github.com/user-attachments/assets/ada6046b-b49e-43c0-9409-fcc51deb219e)
+ 
+ ### 8. Faqs
+![faqs](https://github.com/user-attachments/assets/2775869d-478e-4518-a094-040436eef665)
+ 
+ 
+ ### 9. profile
+ ![profile](https://github.com/user-attachments/assets/ac277d97-c07d-497f-b051-ae1bcad8f91e)
+ 
+
 
 ## Contributing
 
 Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contact
-
-For any inquiries, please reach out via:
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- GitHub Issues: [Reload Site Issues](https://github.com/yourusername/reload-site/issues)
