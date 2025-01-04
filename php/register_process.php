@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db_connect.php'; // Include database connection
+require '../php/db_connect.php'; // Include database connection
 
 function isPasswordStrong($password)
 {

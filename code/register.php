@@ -16,7 +16,6 @@ if (session_status() === PHP_SESSION_NONE) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/register.css">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -50,12 +49,11 @@ if (session_status() === PHP_SESSION_NONE) {
       <p class="text-center mt-3"><a href="forget_password.php">Forgotten account?</a></p>
       <div class="divider">or</div>
       <p class="text-center"><a href="login.php" class="already-account">Already have an account?</a></p>
-      <button id="google-login-button" class="btn btn-danger w-100">Join with Google</button>
+      <a href="#" class="btn btn-danger w-100 mt-2">Login with Google</a>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/google_login.js"></script>
   <script>
     function togglePassword() {
       const passwordField = document.getElementById("password");

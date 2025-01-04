@@ -71,6 +71,13 @@ body {
   line-height: 48px;
   border-radius: 6px;
 }
+.btn-danger {
+  background-color: #d9534f; /* Red shade for danger */
+  border-color: #d43f3a; /* Slightly darker red for the border */
+  font-size: 17px;
+  line-height: 48px;
+  border-radius: 6px;
+}
 
 /* Divider Styling */
 .divider {

@@ -1,6 +1,12 @@
 <?php
-session_start();
+include '../php/db_connect.php'; // Include database connection
+
+// Start the session
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +15,6 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Helping Agency</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../assets/css/login.css">
 </head>
@@ -20,15 +25,14 @@ session_start();
     <div class="login-container">
       <h2>Log in to Helping Agency</h2>
       <?php
-      // Display feedback messages
       if (isset($_SESSION['message'])) {
         echo "<div class='alert alert-" . htmlspecialchars($_SESSION['message_type']) . "'>" . htmlspecialchars($_SESSION['message']) . "</div>";
-        unset($_SESSION['message'], $_SESSION['message_type']); // Unset session messages
+        unset($_SESSION['message'], $_SESSION['message_type']);
       }
       ?>
       <form action="../php/login_process.php" method="POST">
         <div class="mb-3">
-          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required minlength="3" maxlength="5">
+          <input type="text" class="form-control" id="username" name="username" placeholder="Username" required minlength="3" maxlength="50">
         </div>
         <div class="mb-3 password-wrapper">
           <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
@@ -39,11 +43,11 @@ session_start();
       <p class="text-center"><a href="forget_password.php">Forgotten account?</a></p>
       <div class="divider">or</div>
       <a href="register.php" class="btn btn-success w-100">Create New Account</a>
+      <a href="#" class="btn btn-danger w-100 mt-2">Login with Google</a>
     </div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/google_login.js"></script>
   <script>
     function togglePassword() {
       const passwordField = document.getElementById("password");
